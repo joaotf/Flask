@@ -1,0 +1,29 @@
+<html lang="pt-br">
+<head>
+    <title>Consulta</title>
+</head>
+<body>
+    <form action="{{url_for('graph')}}" method="POST">
+        <h1>Consulta de Postos</h1>
+        <select name = 'cidade'>
+            <option value="" disabled selected>Selecione a cidade</option>
+            {%for a in cidadees%}
+                <option>{{a}}</option>
+            {%endfor%}
+        </select>
+        <br/>
+        <br/>
+        <br/>
+        <select name = 'combustível'>
+            <option value="" disabled selected>Selecione o tipo de combustível</option>
+            {%for b in tipoos%}
+                <option>{{b}}</option>
+            {%endfor%}
+        </select>
+        <br/>
+        <br/>
+        <br/>
+        <input type="submit" value="Consultar"/>
+    <form>
+</body>
+</html>
